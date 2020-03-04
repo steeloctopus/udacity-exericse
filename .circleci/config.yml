@@ -18,9 +18,11 @@ jobs:
             make install
           name: Test
   run-lint:
-    command: |
-      . udacity-exercise/bin/activate
-      make lint
+    steps:
+      - run:
+        command: |
+          . udacity-exercise/bin/activate
+          make lint
 
 workflows:
   main:
