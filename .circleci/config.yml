@@ -17,11 +17,11 @@ jobs:
             python3 -m venv udacity-exercise
             . udacity-exercise/bin/activate
             make install
-#      - run:
-#        name: Lint
-#        command: |
-#            . udacity-exercise/bin/activate
-#            make lint
+      - run:
+          name: Lint
+          command: |
+            . udacity-exercise/bin/activate
+            make lint
 workflows:
   main:
     jobs:
