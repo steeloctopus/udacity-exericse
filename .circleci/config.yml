@@ -12,20 +12,19 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
+          name: Test
           command: |
             python3 -m venv udacity-exercise
             . udacity-exercise/bin/activate
             make install
-          name: Test
-  run-lint:
-    steps:
       - run:
+        name: Lint
         command: |
-          . udacity-exercise/bin/activate
-          make lint
+            . udacity-exercise/bin/activate
+            make lint
+
 
 workflows:
   main:
     jobs:
       - build-and-test
-      - run-lint
